@@ -1,4 +1,4 @@
-trigger LeadTrigger on Lead (before insert, before update) {
+trigger LeadDeDupeTrigger on Lead(before insert, before update){
 
     Map<String, List<Lead>> emailLeadMap = new Map<String, List<Lead>>();
     for(Lead l : trigger.new){
