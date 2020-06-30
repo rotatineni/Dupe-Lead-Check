@@ -18,5 +18,5 @@ trigger LeadDeDupeTrigger on Lead(before insert, before update){
                 emailLeadMap.get(l.Email)[0].addError('A Lead with this Email address exists in the system');
             }   
         }
-    } 
+    }
 }
